@@ -394,6 +394,7 @@ class HompageState extends State<Hompage> {
                             onTapDown: (e) {
                               setState(() {
                                 search = !search;
+                                // searchcontroller.call();
                                 scrollController.animateTo(
                                     scrollController.position.pixels +
                                         e.globalPosition.dy -
@@ -441,6 +442,7 @@ class HompageState extends State<Hompage> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
                             child: TextFormField(
+                              autofocus: true,
                               controller: searchcontroller,
                               onChanged: (e) {
                                 // print(searchcontroller.text);
@@ -465,7 +467,7 @@ class HompageState extends State<Hompage> {
                       )
                     : Container(),
 
-                for (int i = 0; i < 12; i++)
+                for (int i = 0; i < 13; i++)
                   ("Yashika".toLowerCase().contains(searching.toLowerCase()))
                       ? Members(
                           name: "Yashika",
